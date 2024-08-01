@@ -173,7 +173,7 @@ const Users = () => {
             </tr>
           </thead>
           <tbody>
-            {users.length>0 && users.map((user) => (
+            {users && users.map((user) => (
               <tr
                 className={`text-center hover:bg-blue-200 ${
                   user?.block ? "bg-red-300" : ""
