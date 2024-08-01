@@ -176,7 +176,7 @@ const Users = () => {
             {users.map((user) => (
               <tr
                 className={`text-center hover:bg-blue-200 ${
-                  user.block ? "bg-red-300" : ""
+                  user?.block ? "bg-red-300" : ""
                 }`}
                 key={user?.id}
                 onClick={() => handleSelect(user?.id)}
