@@ -11,7 +11,7 @@ const Users = () => {
   const axiosPrivate = useAxiosPrivate();
   const navigate = useNavigate();
 
-  const { auth, setAuth } = useAuth();
+  const { setAuth } = useAuth();
   const [users, setUsers] = useState([]);
   const [selectedUsers, setSelectedUsers] = useState([]);
   const [loading, setLoading] = useState();
@@ -173,7 +173,7 @@ const Users = () => {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => (
+            {users.length>0 && users.map((user) => (
               <tr
                 className={`text-center hover:bg-blue-200 ${
                   user?.block ? "bg-red-300" : ""
